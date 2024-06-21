@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import Home from './component/home';
+import Resume from './component/resume';
+import About from './component/about';
+import Contact from './component/contact';
+import Skills from './component/skills';
+import Portfolio from './component/portfolio';
+import Navbar from './component/navbar';
+import { Particless } from './particles'; // Adjust the import statement
+
+function Layout() {
+  const location = useLocation();
+  const renderParticle = location.pathname === '/';
+
+  return (
+    <>
+      {renderParticle && <Particless/>}
+      <Navbar />
+      <div className='appcontent'>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/AboutMe' element={<About />} />
+        <Route path='/resume' element={<Resume />} />
+        <Route path='/Skills' element={<Skills />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/Contact' element={<Contact />} />
+      </Routes>         
+      </div>
+    </>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Layout />
+      </Router>
     </div>
   );
 }

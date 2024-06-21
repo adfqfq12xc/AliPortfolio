@@ -1,13 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background: #1d1d1d;   /* Custom property for background color */
+  --maincolor: #ffdd40;     /* Custom property for main color */
+  --text: #ffffff;          /* Custom property for text color */
+  --nav-color: #181818;     /* Custom property for navigation color */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;   /* Sets the base font size to 10px (for easier rem calculations) */
+  height: 100%;       /* Makes sure HTML takes up the full height of the viewport */
+}
+
+body {
+  background-color: var(--background);   /* Applies the --background color to the body background */
+  color: var(--text);                    /* Applies the --text color to the text in the body */
 }

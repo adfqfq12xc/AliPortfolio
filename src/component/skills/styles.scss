@@ -1,0 +1,49 @@
+.SkillsContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+h1{
+    font-size: 4rem;
+  margin: 1rem;
+  margin-right: auto;
+
+    border-bottom: 2px solid var(--maincolor);
+
+}
+
+
+
+} 
+.Skills1,
+.Skills2,
+.Skills3{
+flex: 1;
+ display: flex;
+ flex-direction: column;
+
+}
+
+.func{
+    margin-top: 2rem;
+    p{
+        margin-left: 1rem;
+        font-size: 2rem;
+        letter-spacing: 1;
+        margin-bottom: 1rem;
+    }
+
+}
+.line{
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+
+}
+@media screen and (max-width:768px) {
+
+    .SkillsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}

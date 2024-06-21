@@ -1,0 +1,104 @@
+.navbar {
+    background-color: var(--nav-color);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+}
+
+.navbarcontainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+  
+}
+
+.navbarlogo {
+    margin-left: 2rem;
+    color: var(--maincolor);
+
+
+}
+
+.containerMenu {
+    display: flex;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+
+
+}
+
+.nav-icon {
+    display: none;
+}
+
+.menuitems {
+    line-height: 40px;
+    height: inherit;
+    font-size: 1.6rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuitem {
+    color: var(--maincolor);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.menuitem::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.menuitem:hover::after {
+    width: 100%;
+    background-color: var(--maincolor);
+}
+
+@media only screen and (max-width: 768px) {
+    .containerMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        width: 100vw;
+        position: absolute;
+        left: -110%;
+        top: 90px;
+        opacity: 1;
+        transition:all 0.5s ease;
+        
+    &.active {
+        left: 0;
+        background: #181818;
+        opacity: 1;
+    }
+}
+.menuitem{
+    border-bottom: 1px solid #282828 ;
+    margin-bottom: 0px;
+    padding: 20px 0px;
+}
+.menuitem::after {
+    content: none; /* Disable the ::after element on small screens */
+}
+
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+        color: var(--maincolor);
+        padding-right: 1rem;
+    }
+}
