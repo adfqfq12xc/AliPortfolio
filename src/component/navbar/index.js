@@ -15,16 +15,12 @@ export default function Index() {
       to:'/AboutMe'
     },
     {
-      label:"Resume",
-      to:'/resume'
-    },
-    {
       label:"Skills",
       to:'/Skills'
     },
     {
-      label:"Portfolio",
-      to:'/portfolio'
+      label:"Project",
+      to:'/project'
     },
     {
       label:"Contact",
@@ -43,7 +39,7 @@ export default function Index() {
         <ul className={`containerMenu${togel?' active' :''}`}>
           {data.map((item,key)=>(
             <li key={key} className='menuitems'>
-              <Link to={item.to} className='menuitem' >
+              <Link to={item.to} className='menuitem' onClick={()=>{settogle(false)}}>
               {item.label}  
               </Link>
             </li>

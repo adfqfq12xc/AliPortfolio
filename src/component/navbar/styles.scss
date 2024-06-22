@@ -6,6 +6,8 @@
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
+    top: 0;
+    z-index: 1900;
 }
 
 .navbarcontainer {
@@ -13,14 +15,11 @@
     align-items: center;
     width: 100%;
     flex: 1;
-  
 }
 
 .navbarlogo {
     margin-left: 2rem;
     color: var(--maincolor);
-
-
 }
 
 .containerMenu {
@@ -28,8 +27,6 @@
     list-style: none;
     flex: 1;
     justify-content: center;
-
-
 }
 
 .nav-icon {
@@ -57,10 +54,9 @@
     display: block;
     height: 3px;
     width: 0;
-    background-color: transparent;
+    background-color: #282828;
     transition: all 0.5s ease-in-out;
 }
-
 
 .menuitem:hover::after {
     width: 100%;
@@ -72,28 +68,32 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        z-index: 1;
+        z-index: 12;
         width: 100vw;
         position: absolute;
         left: -110%;
-        top: 90px;
-        opacity: 1;
-        transition:all 0.5s ease;
-        
-    &.active {
+        top: 80px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+    
+    .containerMenu.active {
         left: 0;
         background: #181818;
         opacity: 1;
     }
-}
-.menuitem{
-    border-bottom: 1px solid #282828 ;
-    margin-bottom: 0px;
-    padding: 20px 0px;
-}
-.menuitem::after {
-    content: none; /* Disable the ::after element on small screens */
-}
+
+    .menuitem {
+        border-bottom: 1px solid #282828;
+        margin-bottom: 0px;
+        padding: 20px 0px;
+        cursor: pointer;
+    }
+
+    .menuitem::after {
+        content: none; /* Disable the ::after element on small screens */
+    }
 
     .nav-icon {
         display: block;

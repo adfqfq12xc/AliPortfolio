@@ -28,7 +28,7 @@ export default function Index() {
   return (
     <div>
       <Header
-        prop={{ header: "About us", icon: <BsInfoCircleFill size={40} /> }}
+        prop={{ header: "About ME", icon: <BsInfoCircleFill size={40} /> }}
       />
       <div className="containerAbout">
         <div className="aboutcontent">

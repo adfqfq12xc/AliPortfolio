@@ -1,7 +1,6 @@
 import './App.scss';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './component/home';
-import Resume from './component/resume';
 import About from './component/about';
 import Contact from './component/contact';
 import Skills from './component/skills';
@@ -16,14 +15,15 @@ function Layout() {
   return (
     <>
       {renderParticle && <Particless/>}
-      <Navbar />
+     <div className='navbarHome'>
+      <Navbar  />
+      </div>
       <div className='appcontent'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/AboutMe' element={<About />} />
-        <Route path='/resume' element={<Resume />} />
         <Route path='/Skills' element={<Skills />} />
-        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/project' element={<Portfolio />} />
         <Route path='/Contact' element={<Contact />} />
       </Routes>         
       </div>
