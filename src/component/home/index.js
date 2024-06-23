@@ -1,10 +1,9 @@
 import React from 'react';
 import './styles.scss';
-import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 export default function Index() {
-  const navigate = useNavigate();
 
   return (
     <section id='home' className='home'>
@@ -17,14 +16,14 @@ export default function Index() {
       </div>
       <div className='button'>
         <motion.button
-          onClick={() => { navigate('/Contact'); }}
+          onClick={() => {  }}
           initial={{y:'200vh'}}
           animate={{y:'0'}}
           transition={{ type:'spring', stiffness: 50 }}
 
 
         >
-          Hire Me
+          <Link to='contact'> Hire Me</Link>
         </motion.button>
       </div>
     </section>

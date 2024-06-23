@@ -54,10 +54,12 @@
 button{
   position: relative;
   top: 10%;
+  left: -15%;
   width: 113px;
   height: 24px;
   border-radius: 24px;
   border: 1px solid black;
+  color: black;
   cursor: pointer;
 }
 .portfolio::before {
@@ -99,6 +101,8 @@ img {
   .portfolio {
     flex-direction: column;
     align-items: center; 
+    width: 300px;
+    height: 300px;
     div{
       display: none;
     }

@@ -9,7 +9,7 @@ export default function Index() {
   }
   return (
     <div>
-      <Header prop={{ header: 'Contact Us', icon: <BsInfoCircleFill size={40} /> }} />
+      <Header prop={{ header: 'Contact Me', icon: <BsInfoCircleFill size={40} />,id:"contact" }} />
       <div className='contact'>
       <h1>Lets Talk</h1>
       <form onSubmit={handler}>

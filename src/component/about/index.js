@@ -28,9 +28,9 @@ export default function Index() {
   return (
     <div>
       <Header
-        prop={{ header: "About ME", icon: <BsInfoCircleFill size={40} /> }}
+        prop={{ header: "About ME", icon: <BsInfoCircleFill size={40} /> ,id:"AboutMe" }}
       />
-      <div className="containerAbout">
+      <div className="containerAbout" >
         <div className="aboutcontent">
           <motion.div className="AboutFirst"
                  initial={{ x: '-100vw' }}

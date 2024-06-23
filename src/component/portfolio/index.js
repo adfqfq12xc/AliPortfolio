@@ -35,7 +35,7 @@ export default function Index() {
   return (
     <div>
       <Header
-        prop={{ header: "Portfolio", icon: <BsInfoCircleFill size={40} /> }}
+        prop={{ header: "Portfolio", icon: <BsInfoCircleFill size={40} />,id:"portfolio" }}
       />
       <div className="portfoliocontainer">
         {data.map((item, index) => (

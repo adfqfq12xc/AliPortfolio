@@ -5,8 +5,9 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1900;
 }
 
@@ -47,6 +48,8 @@
     color: var(--maincolor);
     text-decoration: none;
     padding: 0.5rem;
+    cursor: pointer;
+
 }
 
 .menuitem::after {
@@ -61,6 +64,9 @@
 .menuitem:hover::after {
     width: 100%;
     background-color: var(--maincolor);
+}
+.menuitem .active{
+    background-color: aliceblue;
 }
 
 @media only screen and (max-width: 768px) {
@@ -100,5 +106,8 @@
         cursor: pointer;
         color: var(--maincolor);
         padding-right: 1rem;
+        height: 4rem;
     }
+
 }
+
