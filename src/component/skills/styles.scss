@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    overflow: hidden;
 h1{
     font-size: 4rem;
   margin: 1rem;
@@ -45,5 +46,7 @@ flex: 1;
     .SkillsContainer{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
     }
 }
