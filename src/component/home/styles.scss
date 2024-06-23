@@ -3,11 +3,6 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;.home{
-    position: relative;
-    height: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 
@@ -42,58 +37,6 @@
         cursor: pointer;
         font-weight: 500;
         color: var(--maincolor);
-        border-radius: 5px solid black;
-
-    }
-
-button:hover{
-    background-color: var(--maincolor);
-    color: black;
-}
-
-@keyframes typingeffect {
-from{
-    width: 0;
-
-}
-to{
-    width: 100%;
-}
-}
-
-    flex-direction: column;
-
-}   
-.homecontainer{
-   h1{
-
-    margin: 0px;
-    font-size: 8rem;
-    font-weight: 500;
-    line-height: 10rem;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typingeffect 3s;
-
-}
-}
-@media only screen and (max-width : 768px){
-.appcontent h1{
-    font-size: 32px;
-    line-height: 4rem;
-}
-
-}
-
-
-    button{
-        width: 14rem;
-        height: 3rem;
-        background-color: transparent;
-        cursor: pointer;
-        font-weight: 500;
-        color: white;
         border-radius: 5px solid black;
 
     }
