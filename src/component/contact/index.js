@@ -11,7 +11,8 @@ export default function Index() {
     <div>
       <Header prop={{ header: 'Contact Me', icon: <BsInfoCircleFill size={40} />,id:"contact" }} />
       <div className='contact'>
-      <h1>Lets Talk</h1>
+        <h1>Lets Talk</h1>
+
       <form onSubmit={handler}>
       <div className='contactfirst'>
         <input type='text' placeholder='Name'/>
