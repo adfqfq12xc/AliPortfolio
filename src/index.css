@@ -19,5 +19,5 @@ html {
 body {
   background-color: var(--background);   /* Applies the --background color to the body background */
   color: var(--text);           
-  overflow:hidden;/* Applies the --text color to the text in the body */
+/* Applies the --text color to the text in the body */
 }
