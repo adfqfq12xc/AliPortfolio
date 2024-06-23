@@ -50,7 +50,12 @@ export default function Index() {
   const renderSkills = (skills) => {
     return skills.map((e) => (
       <motion.div
+<<<<<<< HEAD
 
+=======
+      initial={{y: "100px"  }}
+      whileInView={{y: 0,transition: {duration: 1,type: "spring",stiffness: 50}}}
+>>>>>>> dcd7c007fd1e8add7726f43c5d56cd8b86d26aca
       className="func"
     >
         <p>{e.label}</p>
