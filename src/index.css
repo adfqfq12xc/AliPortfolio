@@ -13,11 +13,14 @@
 
 html {
   font-size: 62.5%;   /* Sets the base font size to 10px (for easier rem calculations) */
-  height: 100%;       /* Makes sure HTML takes up the full height of the viewport */
+  height: 100%;  
+  /* Makes sure HTML takes up the full height of the viewport */
 }
-
+::-webkit-scrollbar{
+  display: none;
+}   
 body {
   background-color: var(--background);   /* Applies the --background color to the body background */
   color: var(--text);           
-  overflow:hidden;/* Applies the --text color to the text in the body */
+  /* Applies the --text color to the text in the body */
 }

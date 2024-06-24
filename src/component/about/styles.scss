@@ -1,5 +1,9 @@
 .containerAbout{
     display: flex;
+    z-index: 12;
+    position: relative;
+    background-color: var(--background);   /* Applies the --background color to the body background */
+
 }
 
 .aboutcontent{

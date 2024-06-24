@@ -4,6 +4,10 @@
     justify-content: space-between;
     border-bottom: 2px dashed var(--maincolor);
     align-items: center;
+    z-index: 1200;
+    position: relative;
+    background-color: var(--background);   /* Applies the --background color to the body background */
+
 }
 
 .headercomponent h1 {

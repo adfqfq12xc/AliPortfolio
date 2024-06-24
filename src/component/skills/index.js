@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./styles.scss";
 import Header from "../pageheadercomponenet";
 import { GiSkills } from "react-icons/gi";
@@ -26,43 +26,6 @@ export default function Index() {
     { label: "Firebase", value: "70" },
     { label: "Postgre", value: "80" },
   ];
-
-  // State to track if the viewport is mobile
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Effect to check viewport width on component mount and resize
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as needed
-    };
-
-    // Initial check
-    checkIfMobile();
-
-    // Listen for resize events
-    window.addEventListener("resize", checkIfMobile);
-
-    // Cleanup
-    return () => window.removeEventListener("resize", checkIfMobile);
-  }, []);
-
-  // Function to render skills using Framer Motion if not mobile
-  const renderSkills = (skills) => {
-    return skills.map((e) => (
-      <motion.div
-      className="func"
-    >
-        <p>{e.label}</p>
-        <Line
-          percent={parseInt(e.value)} // Ensure value is parsed as integer
-          className="line"
-          strokeColor="var(--maincolor)"
-          strokeWidth={2}
-        />
-      </motion.div>
-    ));
-  };
-
   return (
     <div>
       <Header
@@ -75,13 +38,11 @@ export default function Index() {
       <div className="SkillsContainer">
         <div className="Skills1">
           <h1>Front End</h1>
-          {isMobile ? (
-            renderSkills(front)
-          ) : (
+          { (
             front.map((e) => (
               <motion.div
-              initial={{x: "100px"  }}
-              whileInView={{x: 0,transition: {duration: 1,type: "spring",stiffness: 50}}}
+              initial={{opacity:0  }}
+              whileInView={{opacity:1,transition: {duration:0.3,type: "spring",stiffness: 50}}}
               className="func"
             >
                 <p>{e.label}</p>
@@ -97,14 +58,12 @@ export default function Index() {
         </div>
         <div className="Skills2">
           <h1>Back End</h1>
-          {isMobile ? (
-            renderSkills(back)
-          ) : (
-            back.map((e) => (
+
+         {  back.map((e) => (
 
               <motion.div
-              initial={{x: "100px"  }}
-              whileInView={{x: 0,transition: {duration: 1,type: "spring",stiffness: 50}}}
+              initial={{opacity:0  }}
+              whileInView={{opacity:1,transition: {duration: 1,type: "spring",stiffness: 50}}}
               className="func"
             >
             
@@ -116,18 +75,16 @@ export default function Index() {
                   strokeWidth={2}
                 />
               </motion.div>
-            ))
+            )
           )}
         </div>
         <div className="Skills3">
           <h1>Databases</h1>
-          {isMobile ? (
-            renderSkills(databases)
-          ) : (
+          { (
             databases.map((e) => (
               <motion.div
-              initial={{x: "100px"  }}
-              whileInView={{x: 0,transition: {duration: 1,type: "spring",stiffness: 50}}}
+              initial={{opacity:0  }}
+              whileInView={{opacity:1,transition: {duration: 1000,type: "spring",stiffness: 50}}}
               className="func"
             >
                 <p>{e.label}</p>

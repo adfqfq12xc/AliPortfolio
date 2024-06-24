@@ -19,7 +19,7 @@ export default function Index() {
     {
       label: "Social Media App",
       value: socialMediaAppImage,
-      link: "https://example.com/social-media-app", // Add the URL for the link
+      link: "https://github.com/adfqfq12xc/PrtfolioReactApp", // Add the URL for the link
     },
     {
       label: "Tour App",
@@ -35,7 +35,7 @@ export default function Index() {
   return (
     <div>
       <Header
-        prop={{ header: "Portfolio", icon: <BsInfoCircleFill size={40} />,id:"portfolio" }}
+        prop={{ header: "My Projects", icon: <BsInfoCircleFill size={40} />,id:"portfolio" }}
       />
       <div className="portfoliocontainer">
         {data.map((item, index) => (
@@ -47,7 +47,7 @@ export default function Index() {
             <img src={item.value} alt="" className="portfolio-image" />
             <div className="div">
               <p className="text">{item.label}</p>
-              <button>Show</button>
+              <button>Show Demo</button>
             </div>
           </div>
         ))}

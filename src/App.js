@@ -14,11 +14,12 @@ function Layout() {
       </div>
       <div className='appcontent'>
         <Home /> 
+     <div className='others'>
         <About />
         <Skills />
         <Portfolio />
         <Contact />
-        
+        </div>
       </div>
     </>
   );

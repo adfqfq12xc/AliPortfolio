@@ -31,7 +31,7 @@ export default function Navbar() {
               className='menuitem'
               offset={-60}
               smooth={true}
-              duration={500}
+              duration={50}
               onClick={() => {
                 setToggle(false);
               }}

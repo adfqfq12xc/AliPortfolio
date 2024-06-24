@@ -1,9 +1,17 @@
 .App{
     height: 100vh;
+
 }
 .appcontent{
     height:100%;
 }
 .navbarHome{
     z-index: 1000;
+}
+.others{
+    z-index: 1000;
+    background-color: var(--background); 
+    display: block;
+    /* Applies the --background color to the body background */
+
 }

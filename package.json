@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@tsparticles/react": "^3.0.0",
+    "emailjs": "^4.0.3",
     "framer-motion": "^11.2.11",
     "progress": "^2.0.3",
     "rc-progress": "^4.0.0",

@@ -4,7 +4,11 @@
     height: 100%;
     display: flex;
     flex-direction: column  ;
+    background-color: var(--background);   /* Applies the --background color to the body background */
     gap: 1rem;   
+    position: relative;
+    margin-bottom: 5rem;
+
 
 
 h1{
@@ -43,8 +47,28 @@ h1{
 
 }
 }
-button{
-    margin-left: 35%;
+.contactbutton{
+    margin-left: 52%;
     background-color: transparent;
+    margin-bottom: 1rem;
 
+
+}
+@media screen and (max-width:768px) {
+    .contactbutton{
+        position: absolute;
+        top: 75%;
+        left: -11%;
+    }
+}
+.footer{
+    height:50px;
+    width: 100%;
+    display: flex;justify-content: center;
+    align-items: center;
+    gap: 2rem;
+   a{
+    font-size: 30px;
+    
+   }
 }
