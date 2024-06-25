@@ -12,9 +12,9 @@ export default function Index() {
       </div>
       <div className='homecontainer'>
         <h1>
-          Hello, I'm Ali
+          Hello, I'm Ali Kansoun
           <br />
-          Front End Developer
+          Web Developer
         </h1>
       </div>
       <div className='button'>
