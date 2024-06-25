@@ -24,7 +24,7 @@ export default function Index() {
     {
       label: "Tour App",
       value: paris,
-      link: "https://example.com/tour-app", // Add the URL for the link
+      link: "https://toursappas.netlify.app/", // Add the URL for the link
     }
   ];
 
