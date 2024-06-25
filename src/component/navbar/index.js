@@ -1,49 +1,54 @@
-import React, { useState } from 'react';
-import { FaReact } from 'react-icons/fa';
-import { Link } from 'react-scroll';
-import { FaBars } from 'react-icons/fa';
-import { HiX } from 'react-icons/hi';
+import React, { useRef } from 'react';
 import './styles.scss';
+import Header from '../pageheadercomponenet';
+import { BsInfoCircleFill } from 'react-icons/bs';
+import emailjs from '@emailjs/browser';
 
-export default function Navbar() {
-  const data = [
-    { label: 'Home', to: 'home' },
-    { label: 'AboutMe', to: 'AboutMe' },
-    { label: 'Skills', to: 'skills' },
-    { label: 'Project', to: 'portfolio' },
-    { label: 'Contact', to: 'contact' },
-  ];
+export default function Index() {
+  const form = useRef();
+  const name = useRef();
+  const email = useRef();
+  const message = useRef();
 
-  const [toggle, setToggle] = useState(false);
+  const handler = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm('service_h2h2p64', 'template_6qqxtfs', form.current, '1mQxxT21-e5EUjJnd')
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        }
+      );
+    name.current.value = "";
+    email.current.value = "";
+    message.current.value = "";
+  };
 
   return (
-    <nav className='navbar'>
-      <div className='navbarcontainer'>
-        <Link to={'home'} className='navbarlogo'   smooth={false} duration={5000} offset={-100} >
-          <FaReact size={40} />
-        </Link>
+    <div className='all'>
+      <Header prop={{ header: 'Contact Me', icon: <BsInfoCircleFill size={40} />, id: "contact" }} />
+      <div className='contact'>
+        <h1>Let's Talk</h1>
+        <form onSubmit={handler} ref={form}>
+          <div className='contactfirst'>
+            <input type='text' placeholder='Name' name='from_name' ref={name} />
+            <input type='email' placeholder='Email' name='from_email' ref={email} />
+          </div>
+          <input className='inputtext' type='text' placeholder='Type Your Message..' name='from-message' ref={message} />
+          <button className='contactbutton'>Submit</button>
+        </form>
+        <div className='footer'>
+          <a href="https://www.linkedin.com/in/ali-kansoun-543094294/" target="_blank" rel="noopener noreferrer">
+            <i className="fa-brands fa-linkedin" style={{ color: '#ffdd40' }}></i>
+          </a>
+          <a href="https://github.com/adfqfq12xc" target="_blank" rel="noopener noreferrer">
+            <i className="fa-brands fa-github" style={{ color: '#ffdd40' }}></i>
+          </a>
+        </div>
       </div>
-      <ul className={`containerMenu${toggle ? ' active' : ''}`}>
-        {data.map((item, key) => (
-          <li key={key} className='menuitems'>
-            <Link
-              to={item.to}
-              className='menuitem'
-              offset={-60}
-              smooth={true}
-              duration={50}
-              onClick={() => {
-                setToggle(false);
-              }}
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <div className='nav-icon' onClick={() => setToggle(!toggle)}>
-        {toggle ? <HiX size={30} /> : <FaBars size={30} />}
-      </div>
-    </nav>
+    </div>
   );
 }
