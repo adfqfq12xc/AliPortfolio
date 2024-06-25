@@ -24,7 +24,7 @@ export default function Index() {
     {
       label: "Tour App",
       value: paris,
-      link: "https://example.com/tour-app", // Add the URL for the link
+      link: "https://toursappas.netlify.app/", // Add the URL for the link
     }
   ];
 
@@ -47,7 +47,7 @@ export default function Index() {
             <img src={item.value} alt="" className="portfolio-image" />
             <div className="div">
               <p className="text">{item.label}</p>
-              <button>Show Demo</button>
+              <button>{item.label==="Social Media App"?"Show Code": "Show Demo"}</button>
             </div>
           </div>
         ))}

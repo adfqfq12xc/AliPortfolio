@@ -6,9 +6,9 @@ import emailjs from '@emailjs/browser';
 
 export default function Index() {
   const form = useRef();
-  const name=useRef()
-  const email=useRef()
-  const message=useRef()
+  const name = useRef();
+  const email = useRef();
+  const message = useRef();
 
   const handler = (e) => {
     e.preventDefault();
@@ -22,21 +22,20 @@ export default function Index() {
           console.log('FAILED...', error.text);
         }
       );
-      name.current.value = "";
-      email.current.value = "";
-      message.current.value = "";
-      
+    name.current.value = "";
+    email.current.value = "";
+    message.current.value = "";
   };
 
   return (
     <div className='all'>
       <Header prop={{ header: 'Contact Me', icon: <BsInfoCircleFill size={40} />, id: "contact" }} />
       <div className='contact'>
-        <h1>Lets Talk</h1>
+        <h1>Let's Talk</h1>
         <form onSubmit={handler} ref={form}>
           <div className='contactfirst'>
-            <input type='text' placeholder='Name' name='from_name' ref={email} />
-            <input type='email' placeholder='Email' name='from_email' ref={name}/>
+            <input type='text' placeholder='Name' name='from_name' ref={name} />
+            <input type='email' placeholder='Email' name='from_email' ref={email} />
           </div>
           <input className='inputtext' type='text' placeholder='Type Your Message..' name='from-message' ref={message} />
           <button className='contactbutton'>Submit</button>
