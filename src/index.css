@@ -21,5 +21,8 @@ html {
 }   
 body {
   background-color: var(--background);   /* Applies the --background color to the body background */
-  color: var(--text);           
+  color: var(--text);      
+  button{
+    color:white;
+  }
 }
